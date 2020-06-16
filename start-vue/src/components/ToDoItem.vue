@@ -1,5 +1,5 @@
 <template>
-<li> 
+  <li> 
     <span>
       <input type="checkbox">
       <strong>{{ todo.id }}</strong>
@@ -20,3 +20,13 @@ export default {
     }
 }
 </script>
+
+<style>
+  li {
+   border: 1px solid #ccc;
+   display: flex;
+   justify-content: space-between;
+   padding: .5rem 2rem;
+   margin-bottom: 1rem;
+  }
+</style>

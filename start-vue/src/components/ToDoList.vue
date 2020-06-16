@@ -3,7 +3,9 @@
  <ul> 
    <ToDoItem 
      v-for= "todo of todos"
+     v-bind:key="todo.id"
      v-bind:todo="todo"
+     
    />
  
  </ul>
@@ -20,4 +22,13 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+ul {
+    list-style: none;
+    margin: 0px auto;
+    padding: 0px;
+    width: 70%;
+    
+
+}
+</style>
