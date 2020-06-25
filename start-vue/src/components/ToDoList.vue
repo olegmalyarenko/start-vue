@@ -7,7 +7,7 @@ import Vue from 'Vue';
      v-for= "todo of todos"
      v-bind:key="todo.id"
      v-bind:todo="todo"
-     v-0n:remove-todo="removeTodo"
+     v-on:remove-todo="removeTodo"
      
    />
  
@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     removeTodo(id) {
-     console.log(id);
+     this.$emit('remove-todo', id)
     }
   }
 }

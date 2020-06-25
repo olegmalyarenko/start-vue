@@ -9,7 +9,7 @@ import Vue from 'Vue';
 
     </span>
     <button class="rm"
-            v-on:click="$emit('remove-todo')">&times;</button>
+            v-on:click="$emit('remove-todo',todo.id)">&times;</button>
   </li>
 </template>
 
