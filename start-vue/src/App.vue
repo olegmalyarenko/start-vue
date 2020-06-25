@@ -2,6 +2,7 @@
   <div id="app">
     
    <h1>To do App</h1>
+   <hr>
    <ToDoList
    v-bind:todos="todos"
    />
@@ -11,13 +12,13 @@
 <script>
 import ToDoList from '@/components/ToDoList';
 export default {
-  name: 'App',
+  name: 'app',
   data() {
    return {
      todos: [
-       {id: 1,  title: 'Kупить хлеб', comleted: false},
-       {id: 2,  title: 'Kупить масло', comleted: false},
-       {id: 3,  title: 'Kупить сало', comleted: false}
+       {id: 1,  title: 'Kупить хлеб', completed: false},
+       {id: 2,  title: 'Kупить масло', completed: false},
+       {id: 3,  title: 'Kупить сало', completed: false}
 
      ]
    }

@@ -1,11 +1,15 @@
+import Vue from 'Vue';
 <template>
   <li> 
-    <span>
-      <input type="checkbox">
+    <span v-bind:class="{done: todo.completed}">
+      <input type="checkbox" 
+             v-on:change="todo.completed = !todo.completed">
       <strong>{{ todo.id }}</strong>
       {{ todo.title }}
+
     </span>
-    <button>&times;</button>
+    <button class="rm"
+            v-on:click="$emit('remove-todo')">&times;</button>
   </li>
 </template>
 
@@ -19,6 +23,7 @@ export default {
         }
     }
 }
+
 </script>
 
 <style>
@@ -28,5 +33,13 @@ export default {
    justify-content: space-between;
    padding: .5rem 2rem;
    margin-bottom: 1rem;
+  }
+  .rm {
+   background: red;
+   color: #fff;
+   border-radius: 50%;
+  }
+  .done {
+    text-decoration: line-through;
   }
 </style>

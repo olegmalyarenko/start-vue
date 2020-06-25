@@ -1,3 +1,5 @@
+import Vue from 'Vue';
+
 <template>
  <div>
  <ul> 
@@ -5,6 +7,7 @@
      v-for= "todo of todos"
      v-bind:key="todo.id"
      v-bind:todo="todo"
+     v-0n:remove-todo="removeTodo"
      
    />
  
@@ -18,6 +21,11 @@ export default {
     props: ['todos'],
     components: {
     ToDoItem
+  },
+  methods: {
+    removeTodo(id) {
+     console.log(id);
+    }
   }
 }
 </script>
