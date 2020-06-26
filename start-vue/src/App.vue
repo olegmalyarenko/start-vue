@@ -2,6 +2,9 @@
   <div id="app">
     
    <h1>To do App</h1>
+   <AddToDo
+    @add-todo="addTodo"
+   />
    <hr>
    <ToDoList
    v-bind:todos="todos"
@@ -12,6 +15,7 @@
 
 <script>
 import ToDoList from '@/components/ToDoList';
+import AddToDo from '@/components/AddToDo';
 export default {
   name: 'app',
   data() {
@@ -28,10 +32,15 @@ export default {
    removeTodo(id){
      this.todos= this.todos.filter(t => t.id !==id)
 
+   },
+   addTodo(todo) {
+    this.todos.push(todo)
+
    }
   },
   components: {
-    ToDoList
+    ToDoList,
+    AddToDo
   }
 }
 </script>

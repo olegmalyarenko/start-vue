@@ -4,8 +4,9 @@ import Vue from 'Vue';
  <div>
  <ul> 
    <ToDoItem 
-     v-for= "todo of todos"
+     v-for= "(todo, i)of todos"
      v-bind:key="todo.id"
+     v-bind:index="i"
      v-bind:todo="todo"
      v-on:remove-todo="removeTodo"
      
