@@ -4,7 +4,7 @@ import Vue from 'Vue';
     <span v-bind:class="{done: todo.completed}">
       <input type="checkbox" 
              v-on:change="todo.completed = !todo.completed">
-      <strong>{{ index }}</strong>
+      <strong>{{ index +1 }}</strong>
       {{ todo.title }}
 
     </span>
