@@ -8,10 +8,14 @@
    />
    <hr>
    <ToDoList
+   v-if="todos.length"
    v-bind:todos="todos"
    @remove-todo="removeTodo"
    />
+
+   <p v-else>Nothing to do!</p>
   </div>
+  
 </template>
 
 <script>
