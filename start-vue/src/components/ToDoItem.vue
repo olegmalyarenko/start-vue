@@ -5,7 +5,7 @@ import Vue from 'Vue';
       <input type="checkbox" 
              v-on:change="todo.completed = !todo.completed">
       <strong>{{ index +1 }}</strong>
-      {{ todo.title }}
+      {{ todo.title | uppercase }}
 
     </span>
     <button class="rm"
@@ -22,6 +22,11 @@ export default {
 
         },
       index: Number  
+    },
+    filters: {
+      uppercase(value){
+        return value.toUpperCase();
+      }
     }
 }
 
